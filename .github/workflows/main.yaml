@@ -590,7 +590,7 @@ jobs:
   make-release:
     name: Create and upload release
     runs-on: ubuntu-22.04
-    if: github.event_name == 'push' && contains(github.ref, 'refs/tags/')
+    if: github.event_name == 'push'
     needs: [ffmpeg-package-universal, ffmpeg-windows-build, macos-package-universal, macos-qt6-package, windows-build, windows-qt6-package]
     defaults:
       run:
